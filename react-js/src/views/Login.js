@@ -43,13 +43,10 @@ const Login = () => {
         accessToken: res.data.data.token
       }
 
-      console.log('temp')
-      console.log(temp)
       dispatch(handleLogin(temp))
       ability.update(temp.ability)
       navigate('/')
     } catch (err) {
-      console.log(err)
       toast.error(err?.response?.data?.message || 'Bad credentials')
     }
   }

@@ -24,6 +24,7 @@ const TemplateTitle = '%s - Vuexy React Admin Template'
 
 // ** Default Route
 const DefaultRoute = '/home'
+import UnitRoute from './units'
 
 const Home = lazy(() => import('../../views/Home'))
 const SecondPage = lazy(() => import('../../views/SecondPage'))
@@ -58,7 +59,8 @@ const Routes = [
     meta: {
       layout: 'blank'
     }
-  }
+  },
+  ...UnitRoute
 ]
 
 const getRouteMeta = (route) => {
